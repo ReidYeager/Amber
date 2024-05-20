@@ -1,6 +1,6 @@
 
 #if !defined(GEM_BASE_H)
-#define GEM_BASE_H
+#define GEM_BASE_H 1
 
 // Overritable macros
 // ============================================================
@@ -95,6 +95,7 @@
 #    define GEM_DEBUG 1
 #  else
 #    define GEM_DEBUG 0
+#  endif
 #endif
 
 // ============================================================
@@ -119,6 +120,7 @@
 // Primitive types
 // ============================================================
 
+#if !defined(GEM_DEFINE_TYPES)
 typedef signed char        i8;
 typedef signed short       i16;
 typedef signed int         i32;
@@ -142,5 +144,6 @@ typedef double             f64;
 #define U16_MAX 0xffffu
 #define U32_MAX 0xffffffffu
 #define U64_MAX 0xffffffffffffffffu
+#endif // !GEM_DEFINE_TYPES
 
 #endif // !GEM_BASE_H
